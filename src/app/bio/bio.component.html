@@ -1,0 +1,3 @@
+<div *ngFor="let dev of devs">
+    <p><a [routerLink]="['/bio',dev.id]"> {{dev?.firstName}}</a></p>
+</div>
