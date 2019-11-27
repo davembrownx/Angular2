@@ -9,7 +9,7 @@
     <li class="nav-item">
       <a class="nav-link" routerLink="/bio">Developer Bios</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="authenticated">
       <a class="nav-link" routerLink="/create-bio">Bio Creation Form</a>
     </li>
 
@@ -17,7 +17,7 @@
   <ul>
       <li class="new-item" *ngIf="!authenticated">
           <a class="new-link" routerLink="/login">Login</a>
-        </li>
+      </li>
     <li class="new-item" *ngIf="authenticated">
       <a class="new-link" routerLink="/" (click) = "logout()">Logout</a>
     </li>

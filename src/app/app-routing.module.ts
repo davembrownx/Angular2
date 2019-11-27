@@ -5,13 +5,15 @@ import { BioComponent } from './bio/bio.component';
 import { BioCreateComponent } from './bio-create/bio-create.component';
 import { BioDetailsComponent } from './bio-details/bio-details.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
  
 
 const routes: Routes = [
   { path:'', component:HomeComponent },
   { path: 'bio',component:BioComponent},
   {path:'bio/:id',component:BioDetailsComponent},
-  {path:'create-bio',component:BioCreateComponent},
+  {path:'create-bio',component:BioCreateComponent,
+  canActivate:[AuthService]},
   {path:'login',component:LoginComponent}
 ]
 ;
